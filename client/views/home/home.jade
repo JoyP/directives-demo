@@ -1,2 +1,34 @@
 h3 Directives Demo
 
+div(jp-locate)
+
+div
+
+input(type='text', ng-model='title')
+button(ng-click='addMovie()') Add Movie
+
+div
+
+div(jp-movies, ng-repeat='title in titles', title='{{title}}', remove='delMovie($index)')
+
+div
+
+div(jp-weather)
+div(jp-weather, zip='37211')
+div(jp-weather, zip='15202')
+div(jp-weather, zip='17724')
+
+div
+
+div(ng-repeat='symbol in symbols', jp-stock, symbol='{{symbol}}')
+
+div
+
+div(jp-clock, frequency='2000')
+div(jp-clock, frequency='1000')
+div(jp-clock, frequency='500')
+div(jp-clock, frequency='250')
+div(jp-clock, frequency='10')
+
+div(ng-repeat='person in people', jp-greeting, name='{{person.name}}', age='{{person.age}}')
+

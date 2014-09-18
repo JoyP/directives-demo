@@ -4,11 +4,13 @@
   angular.module('directives-demo')
   .factory('Home', ['$http', function($http){
 
-    function getMessage(){
-      return $http.get('/home');
+    function addMovie(movie){
     }
 
-    return {getMessage:getMessage};
+    function delMovie(movie){
+    }
+
+    return {addMovie:addMovie, delMovie:delMovie};
   }]);
 })();
 
